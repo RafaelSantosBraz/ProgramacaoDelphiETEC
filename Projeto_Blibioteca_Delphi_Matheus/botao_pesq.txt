@@ -1,0 +1,3 @@
+ADOTable1.Filter:='Nome LIKE '+QUOTEDSTR('%'+Edit1.Text+'%');
+ADOTable1.Filtered:=TRUE;
+form6.Show;

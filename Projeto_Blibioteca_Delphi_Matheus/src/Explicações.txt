@@ -1,0 +1,11 @@
+Descompactar todo o conteudo em uma pasta qualquer
+
+Abrir o Delphi e ir na aba "componentes" e em "instalar componete"...
+
+Após isso clique no "Browse" de "Unit file name" e procure o arquivo "GIFImage.pas"
+que você descompacto, clique em Ok e compile e após feche a telinha e selecione a ferramenta
+"Image" que fica na aba "Additional" e la vai ter a opção de importar ".gif".
+
+Espero que tenham gostado....
+
+Marcelo (Pinga2007)

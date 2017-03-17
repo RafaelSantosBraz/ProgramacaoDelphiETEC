@@ -1,0 +1,12 @@
+//Aparecer
+
+if (Form1.AlphaBlendValue = 255) then begin Timer1.Enabled := False; end else begin
+    Form1.AlphaBlendValue := Form1.AlphaBlendValue + 3;
+    end;
+
+
+//Desaparecer
+
+if (Form1.AlphaBlendValue = 24) then begin Timer2.Enabled := False; end else begin
+    Form1.AlphaBlendValue := Form1.AlphaBlendValue - 3;
+    end;
