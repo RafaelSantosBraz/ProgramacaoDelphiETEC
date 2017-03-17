@@ -1,0 +1,30 @@
+Sair
+
+if messagedlg('Deseja sair do Aplicativo?',mtconfirmation,[mbno, mbyes],0)= mryes then
+  begin
+    Application.Terminate;
+  end;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Selecionar
+
+if key  = #13 then
+  begin
+   key:=#0;
+   Perform(wm_nextDlgCtl, 0, 0);
+  end;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Limpar
+
+var
+cont:integer;
+begin
+  for cont:=0 to componentcount-1 do
+   if components[cont] is TEdit then
+     begin
+      TEdit(components[cont]).Clear;
+      Edit1.SetFocus;
+     end;
