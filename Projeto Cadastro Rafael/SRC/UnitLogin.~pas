@@ -1,0 +1,81 @@
+unit UnitLogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls, Mask, Buttons, ComCtrls;
+
+type
+  TFrm_Login = class(TForm)
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    StatusBar1: TStatusBar;
+    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure Edit1KeyPress(Sender: TObject; var Key: Char);
+    procedure Edit2KeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_Login: TFrm_Login;
+
+implementation
+
+Uses UnitPrincipal;
+{$R *.dfm}
+
+procedure TFrm_Login.BitBtn1Click(Sender: TObject);
+begin
+If (Edit1.Text = '') or (Edit2.Text = '') Then
+  Begin
+    ShowMessage('Existem Campos Vazios!');
+End
+Else
+  Begin
+    If (Edit1.Text = 'adm') and (Edit2.Text = '123') Then
+      Begin
+        FrmPrincipal.Show;
+        Frm_Login.Hide;
+    End
+      Else
+        Begin
+          ShowMessage('Usuário ou Senha Inválidos!');
+    End;
+End;
+
+end;
+
+procedure TFrm_Login.BitBtn2Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit1.SetFocus;
+end;
+
+procedure TFrm_Login.Edit1KeyPress(Sender: TObject; var Key: Char);
+begin
+If Key = #13 Then
+  Begin
+    Edit2.SetFocus;
+End;
+end;
+
+procedure TFrm_Login.Edit2KeyPress(Sender: TObject; var Key: Char);
+begin
+If Key = #13 Then
+  Begin
+    BitBtn1.Click;
+End;
+end;
+
+end.

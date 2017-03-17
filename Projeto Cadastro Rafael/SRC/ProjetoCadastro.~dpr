@@ -1,0 +1,27 @@
+program ProjetoCadastro;
+
+uses
+  Forms,
+  Unitprincipal in 'Unitprincipal.pas' {FrmPrincipal},
+  UnitCliente in 'UnitCliente.pas' {Frm_Clientes},
+  UnitFornecedor in 'UnitFornecedor.pas' {FrmFornecedor},
+  UnitProduto in 'UnitProduto.pas' {Frm_Cadastro_Produto},
+  UnitUsuario in 'UnitUsuario.pas' {Frm_Cadastro_Usuario},
+  UnitLogin in 'UnitLogin.pas' {Frm_Login},
+  UnitSplash in 'UnitSplash.pas' {Frm_Splash},
+  UnitPesquisa in 'UnitPesquisa.pas' {FrmPesquisa};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TFrmPesquisa, FrmPesquisa);
+  Application.CreateForm(TFrm_Splash, Frm_Splash);
+  Application.CreateForm(TFrm_Login, Frm_Login);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrm_Clientes, Frm_Clientes);
+  Application.CreateForm(TFrmFornecedor, FrmFornecedor);
+  Application.CreateForm(TFrm_Cadastro_Produto, Frm_Cadastro_Produto);
+  Application.CreateForm(TFrm_Cadastro_Usuario, Frm_Cadastro_Usuario);
+  Application.Run;
+end.
